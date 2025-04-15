@@ -1,0 +1,387 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  /* font-family: "Open-sans", sans-serif; */
+  background-color: #1a1a1a;
+  color: #fff;
+  line-height: 1.6;
+}
+.margin-bottom-small {
+  margin-bottom: 1rem;
+}
+.margin-bottom-medium {
+  margin-bottom: 3rem;
+}
+.margin-bottom-high {
+  margin-bottom: 6rem;
+}
+.margin-top-medium {
+  padding-top: 3rem;
+}
+.centertext {
+  text-align: center;
+}
+.gold-line-slant {
+  height: 4px;
+  background: linear-gradient(90deg, #d4af37, #e5c16c, #d4af37);
+  clip-path: polygon(0 0, 100% 100%, 100% calc(100% - 4px), 0 4px);
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #1a1a1a;
+  position: sticky; /* To sprawi, że navbar będzie "przyklejony" do góry */
+  top: 0; /* Ustala, że navbar ma być przyklejony do góry strony */
+  z-index: 1000; /* Aby navbar był na wierzchu innych elementów */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Dodanie cienia pod navbar */
+}
+.navlogo {
+  width: 5rem;
+}
+.navlinks {
+  display: flex;
+  gap: 1.5rem;
+  font-family: "Cinzel", sans-serif;
+  font-weight: 600;
+  align-items: center;
+}
+.link {
+  text-decoration: none;
+  padding: 0 0.25rem 0 0.25rem;
+  background: linear-gradient(90deg, #f9d65c 0%, #e8b838 50%, #a56d1f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.link:hover {
+  color: #f9d65c;
+  text-shadow: 0 0 8px #f9d65c;
+  transform: scale(1.2);
+}
+.hero {
+  height: 600px;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("img/headlight-lamp-car.webp") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  background: linear-gradient(90deg, #f9d65c 0%, #e8b838 50%, #a56d1f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 0 1rem 0;
+  font-family: "Cinzel", sans-serif;
+}
+
+.hero h2 {
+  font-size: 24px;
+  color: #ccc;
+  margin-bottom: 30px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.hero button {
+  background-color: #d4af37;
+  color: #000;
+  border: none;
+  padding: 14px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  font-family: "Cinzel", sans-serif;
+}
+
+.hero button:hover {
+  background-color: #f0d265;
+  transform: scale(1.05);
+}
+.container {
+  margin: 0 auto;
+  background-color: #fff;
+  color: #222;
+}
+.textcontainer {
+  margin: 0 auto;
+  max-width: 75rem;
+}
+.sectionheader {
+  font-size: 2rem;
+  font-family: "Cinzel", sans-serif;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #f9d65c 0%, #e8b838 50%, #a56d1f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.about-preview {
+  background-color: #1a1a1a;
+  color: #fff;
+  display: flex;
+  gap: 6rem;
+  max-width: 75rem;
+  align-items: center;
+  margin: 0 auto;
+  padding: 6rem 0 6rem 0;
+}
+.about-image img {
+  width: 100%;
+  max-width: 40rem;
+  border-radius: 1rem;
+}
+
+.about-text {
+  flex: 1;
+  /* max-width: 500px; */
+}
+
+.about-button {
+  display: inline-block;
+  color: #d4af37;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  background-color: #111;
+  border: 1px solid #d4af37;
+  font-family: "Cinzel", sans-serif;
+}
+
+.about-button:hover {
+  background: linear-gradient(90deg, #b8860b, #d4af37);
+  color: #000;
+}
+
+.servicesection {
+  background-color: #1a1a1a; /* Ciemnoszare tło sekcji */
+}
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 3rem 0 3rem 0;
+}
+.servicesheader {
+  padding-top: 3rem;
+}
+.tile {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  padding: 1.875rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: solid 1px #d4af37;
+}
+.tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+}
+.servicename {
+  font-size: 1.75rem;
+  font-weight: 300;
+  font-family: "Cinzel", sans-serif;
+  text-align: center;
+  background: linear-gradient(90deg, #f9d65c 0%, #e8b838 50%, #a56d1f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.tile-description {
+  font-size: 0.75rem;
+  font-style: italic;
+}
+.services ul {
+  list-style: none;
+}
+.servicecentered {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  line-height: 1.5;
+}
+.serviceicon {
+  width: 16px !important;
+  height: 16px !important;
+  display: inline-flex;
+  flex-shrink: 0;
+  color: #e8b838;
+}
+.additionalservices {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+.main-gallery {
+  padding: 6rem 0 6rem 0;
+  background-color: #f9f9f9;
+}
+.gallery {
+  max-width: 90rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+.gallery-image {
+  width: 100%;
+  border-radius: 1rem;
+  border: 2px solid #d4af37;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover;
+}
+.gallery-image:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+}
+/* Sekcja "Dlaczego my" */
+.why-us {
+  background-color: #f9f9f9; /* Jasne tło, np. bardzo jasny szary lub beż */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Kontener dla ikon */
+.icons-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Pojedyncza ikona */
+.icon-item {
+  text-align: center;
+  max-width: 200px;
+}
+
+.icon {
+  font-size: 48px;
+  color: #d4af37; /* Złote ikony */
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+/* Efekt po najechaniu */
+.icon-item:hover .icon {
+  transform: scale(1.2);
+}
+
+/* Opis pod ikoną */
+.icon-item p {
+  font-size: 16px;
+  color: #333; /* Ciemnoszary tekst */
+  font-weight: bold;
+}
+.footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin: 0 auto;
+  max-width: 75rem;
+  justify-items: center;
+  padding: 6rem 2rem;
+  gap: 2rem;
+}
+.footerlinks {
+  display: flex;
+  flex-direction: column;
+}
+.columntitle {
+  text-transform: uppercase;
+  font-family: "Cinzel", sans-serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  /* color: #f9d65c; */
+}
+.sm-icon {
+  color: #d4af37;
+  font-size: 2rem;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+@media (max-width: 768px) {
+  .footer {
+    justify-items: start;
+    text-align: left;
+    padding: 3rem 1rem;
+  }
+}
+.footer-bottom {
+  background-color: #000;
+  text-align: center;
+  color: #777;
+  font-size: 0.875rem;
+  padding: 1rem;
+}
+/* testimonials */
+.testimonials {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.section-title {
+  font-family: "Cinzel", serif;
+  font-size: 2rem;
+  color: #f9d65c;
+  margin-bottom: 3rem;
+}
+.section-title-black {
+  font-family: "Cinzel", serif;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 3rem;
+}
+
+.testimonial-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.testimonial {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border: 1px solid #f9d65c;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(249, 214, 92, 0.1);
+  transition: all 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(249, 214, 92, 0.25);
+}
+
+.quote {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.author {
+  font-weight: bold;
+  color: #f9d65c;
+}
